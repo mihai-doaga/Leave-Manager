@@ -17,10 +17,20 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
+    controllers: ['Main'],
+
     views: [
         'Main'
     ],
 
+    stores: [
+        'Leaves'
+    ],
+
+    models: [
+        'Leave'
+    ],
+    
     icon: {
         '57': 'resources/icons/Icon.png',
         '72': 'resources/icons/Icon~ipad.png',

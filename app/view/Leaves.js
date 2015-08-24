@@ -1,21 +1,23 @@
-Ext.define('LeaveManager.view.Main', {
-    extend: 'Ext.Container',
-    xtype: 'main',
-    requires: [
-        'Ext.Menu',
-        'LeaveManager.view.Leaves'
+Ext.define('LeaveManager.view.Leaves', {
+	extend: 'Ext.navigation.View',
+	xtype: 'leaves',
+	requires: [
+        'Ext.dataview.List',
     ],
-    config: {
 
-        layout: {
-            type: 'card'
-        },
+	config: {
+		title: 'Leaves',
 
-        items: [
-           {
+		items: [
+		{
+			xtype: 'list',
+			store: 'Leaves',
+			itemTpl: '{name}, {date}',
+		},
+		{
             xtype: 'toolbar',
             docked: 'top',
-            title: 'Leave Manager',
+            title: 'Leaves',
             items: [
                 {
                     xtype:'button',
@@ -69,9 +71,9 @@ Ext.define('LeaveManager.view.Main', {
 
         return Ext.create('Ext.Menu',{
             style: 'padding: 20',
-            id: 'menu',
+            id: 'menu_leaves',
             width: 200,
             items: items,
         });
-    }
+	}
 });
