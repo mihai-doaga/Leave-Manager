@@ -19,7 +19,8 @@ Ext.define('LeaveManager.view.Main', {
             items: [
                 {
                     xtype:'button',
-                    text: 'M',
+                    //text: 'M',
+                    iconCls: 'list',
                     handler: function() {
                         if(Ext.Viewport.getMenus().left.isHidden()) {
                             Ext.Viewport.showMenu('left');
